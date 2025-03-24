@@ -65,7 +65,15 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.Hospit
 
         public void bind(Hospital hospital) {
             nameTextView.setText(hospital.getName());
-            distanceTextView.setText(hospital.getFormattedDistance());
+
+            String formattedDistance = hospital.getFormattedDistance();
+            if (formattedDistance.isEmpty()) {
+                distanceTextView.setVisibility(View.GONE);
+            } else {
+                distanceTextView.setText(formattedDistance);
+                distanceTextView.setVisibility(View.VISIBLE);
+            }
+
             addressTextView.setText(hospital.getAddress());
             phoneTextView.setText(hospital.getPhoneNumber());
 

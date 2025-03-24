@@ -34,6 +34,10 @@ public class Hospital {
 
     // Formatted distance string (e.g., "1.2 km")
     public String getFormattedDistance() {
+        // If distance is 0.0 (city-based search), don't display distance
+        if (distance == 0.0) {
+            return "";
+        }
         if (distance < 1.0) {
             return String.format("%.0f m", distance * 1000);
         } else {
