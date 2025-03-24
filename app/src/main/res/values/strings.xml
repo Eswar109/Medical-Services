@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Medical Services</string>
+
+    <string-array name="facility_types">
+        <item>Select Cities</item>
+        <item>Tenali</item>
+        <item>Guntur</item>
+        <item>Vijayawada</item>
+        <item>Vadlamudi</item>
+    </string-array>
 </resources>
